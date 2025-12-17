@@ -1,152 +1,161 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Apple CarPlay Dashboard</title>
 
-  <!-- SEO META TAGS -->
+<style>
+body{
+  margin:0;
+  background:black;
+  font-family:-apple-system,BlinkMacSystemFont,Arial;
+  color:white;
+}
 
-  <title>Dahri Organic Farms Haryana | Organic Vegetables, Fruits & Tractor Rent</title>
-  <meta name="description" content="Dahri Organic Farms Haryana – Buy organic vegetables, fruits, sugarcane, shakkar. Tractor rent available. Direct from farmer Anshul, Haryana." />
-  <meta name="keywords" content="Dahri Organic Farms Haryana, organic farm haryana, organic vegetables haryana, tractor on rent haryana, sugarcane haryana, aloo gobhi matar" />
-  <meta name="author" content="Dahri Organic Farms Haryana" />
+.carplay{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
 
-  <!-- OPEN GRAPH FOR GOOGLE -->
+header{
+  padding:15px;
+  text-align:center;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:2px;
+}
 
-  <meta property="og:title" content="Dahri Organic Farms Haryana" />
-  <meta property="og:description" content="Pure organic products directly from farmer in Haryana. Vegetables, fruits & tractor rent." />
-  <meta property="og:type" content="website" />
+.apps{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:25px;
+  padding:30px;
+}
 
-  <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; color:#1f1f1f; background:#f6f8f5; }
-    header { background:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color:white; padding:90px 20px; text-align:center; }
-    header h1 { font-size:44px; margin-bottom:10px; font-weight:900; }
-    header p { font-size:20px; font-weight:600; }
-    nav { background:#0b3d1b; padding:14px; text-align:center; position:sticky; top:0; z-index:1000; }
-    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:700; }
-    section { padding:60px 20px; max-width:1300px; margin:auto; }
-    h2 { text-align:center; color:#0b3d1b; margin-bottom:35px; font-size:34px; font-weight:900; }
+.app{
+  background:#1c1c1e;
+  border-radius:25px;
+  text-align:center;
+  padding:20px 10px;
+  cursor:pointer;
+  transition:0.2s;
+}
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:28px; }
-    .card { background:white; border-radius:14px; padding:20px; box-shadow:0 6px 16px rgba(0,0,0,0.15); text-align:center; }
-    .card img { width:100%; height:220px; object-fit:cover; border-radius:12px; }
-    .card h3 { margin:16px 0 8px; font-size:20px; font-weight:800; color:#000; }
-    .card p { font-size:14px; }
+.app:hover{transform:scale(1.07);background:#2c2c2e;}
 
-    .btn { display:inline-block; margin-top:12px; background:#25D366; color:white; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:800; }
+.app img{width:70px;height:70px;margin-bottom:10px;}
+.app span{font-weight:600;}
 
-    footer { background:#0b3d1b; color:white; text-align:center; padding:35px; margin-top:60px; }
-  </style>
+.screen{
+  display:none;
+  padding:20px;
+}
 
+video,iframe{
+  width:100%;
+  height:70vh;
+  border-radius:20px;
+}
+
+.back{
+  margin:10px 0;
+  background:#444;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:10px;
+  font-size:16px;
+}
+
+footer{
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  padding-bottom:10px;
+}
+</style>
 </head>
 <body>
 
-<a href="https://wa.me/918006580098" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:16px 22px;border-radius:50px;font-weight:800;text-decoration:none;box-shadow:0 4px 8px rgba(0,0,0,.3)">📲 WhatsApp</a>
+<div class="carplay">
+<header>🍎 WEB APPLE CARPLAY</header>
 
-<header style="background:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding:100px 20px; text-align:center;">
-  <h1 style="color:#000000; font-weight:900; font-size:52px; letter-spacing:3px; margin-bottom:10px; text-shadow:3px 3px 8px rgba(0,0,0,0.35);">
-    DAHRI ORGANIC FARMS HARYANA
-  </h1>
-  <h2 style="color:#000000; font-weight:800; font-size:30px; margin-top:5px; text-shadow:2px 2px 6px rgba(0,0,0,0.3);">
-    दाहरी ऑर्गेनिक फार्म्स हरियाणा
-  </h2>
-  <p style="margin-top:18px; font-size:20px; font-weight:700; color:#0b3d1b; background:rgba(255,255,255,0.85); display:inline-block; padding:10px 20px; border-radius:12px;">
-    Pure Organic Products • सीधे किसान से
-  </p>
-</header>
-
-<nav>
-  <a href="#products">Products</a>
-  <a href="#process">Organic Farming</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="products">
-  <h2>ORGANIC PRODUCTS AVAILABLE</h2>
-  <div class="grid">
-
-```
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80" />
-  <h3>Potato (Aloo) / आलू</h3>
-  <p><b>Price:</b> ₹14 per kg</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Potato%20Aloo%20₹14%20per%20kg">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=800&q=80" />
-  <h3>Fresh Fruits / ताजे फल</h3>
-  <p>Seasonal organic fruits available</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20organic%20fruits">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1587049352851-8d3a8a6e0c16?auto=format&fit=crop&w=800&q=80" />
-  <h3>Shakkar / शक्कर</h3>
-  <p><b>Price:</b> ₹70 per kg</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Shakkar%20₹70%20per%20kg">Order on WhatsApp</a>
-</div>
-
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1598965675045-45c7c36b9a64?auto=format&fit=crop&w=800&q=80" />
-  <h3>Sugarcane / गन्ना</h3>
-  <p><b>Price:</b> ₹600 per Quintal</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Sugarcane%20₹600%20per%20quintal">Order on WhatsApp</a>
-</div>
-```
-
+<div class="apps" id="home">
+  <div class="app" onclick="openScreen('video')">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png" />
+    <span>Videos</span>
   </div>
-</section>
 
-<section id="equipment">
-  <h2>VEHICLES FOR RENT / वाहन किराये पर</h2>
-  <div class="grid">
+  <div class="app" onclick="openScreen('youtube')">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/youtube.png" />
+    <span>YouTube</span>
+  </div>
 
-```
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1604066867775-43f48e3957d8?auto=format&fit=crop&w=800&q=80" />
-  <h3>John Deere Tractor</h3>
-  <p><b>Rent:</b> ₹2699 per day</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20John%20Deere%20tractor%20₹2699%20per%20day">Book on WhatsApp</a>
+  <div class="app" onclick="openScreen('music')">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/music.png" />
+    <span>Music</span>
+  </div>
+
+  <div class="app" onclick="openScreen('maps')">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/map.png" />
+    <span>Maps</span>
+  </div>
+
+  <div class="app" onclick="openScreen('mirror')">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/iphone.png" />
+    <span>iPhone</span>
+  </div>
 </div>
 
-<div class="card">
-  <img src="https://images.unsplash.com/photo-1598514982848-ff2f37edbb0a?auto=format&fit=crop&w=800&q=80" />
-  <h3>Mahindra Tractor</h3>
-  <p><b>Rent:</b> ₹2699 per day</p>
-  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Mahindra%20tractor%20₹2699%20per%20day">Book on WhatsApp</a>
+<div class="screen" id="video">
+  <button class="back" onclick="goHome()">⬅ Back</button>
+  <video controls autoplay>
+    <source src="sample.mp4" type="video/mp4" />
+  </video>
 </div>
-```
 
-  </div>
-</section>
+<div class="screen" id="youtube">
+  <button class="back" onclick="goHome()">⬅ Back</button>
+  <iframe src="https://www.youtube.com/embed?listType=search&list=music" allowfullscreen></iframe>
+</div>
 
-<section id="process">
-  <h2>ORGANIC FARMING PROCESS</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1598514982848-ff2f37edbb0a?auto=format&fit=crop&w=800&q=80" />
-      <h3>Organic Manure & Compost</h3>
-      <p>We use cow dung manure, compost & natural inputs only.</p>
-    </div>
-  </div>
-</section>
+<div class="screen" id="music">
+  <button class="back" onclick="goHome()">⬅ Back</button>
+  <video controls>
+    <source src="music.mp4" type="video/mp4" />
+  </video>
+</div>
 
-<section id="contact">
-  <h2>CONTACT US</h2>
-  <p style="text-align:center;font-size:18px;font-weight:700">
-    Anshul<br />
-    📞 8006580098<br />
-    📧 anshuldahri4686@gmail.com<br />
-    Haryana, India
-  </p>
-</section>
+<div class="screen" id="maps">
+  <button class="back" onclick="goHome()">⬅ Back</button>
+  <iframe src="https://www.google.com/maps?q=Haryana&output=embed"></iframe>
+</div>
 
-<footer>
-  <p>© 2025 DAHRI ORGANIC FARM HARYANA</p>
-  <p>Healthy Food • Healthy Soil • Healthy Life</p>
-</footer>
+<div class="screen" id="mirror">
+  <button class="back" onclick="goHome()">⬅ Back</button>
+  <p style="text-align:center;font-size:18px">📱 Use screen mirroring apps to mirror iPhone here</p>
+  <p style="text-align:center;color:#aaa">LonelyScreen • LetsView • ApowerMirror</p>
+</div>
+
+<footer>⚠️ Web UI only – Not official Apple CarPlay</footer>
+</div>
+
+<script>
+function openScreen(id){
+  document.getElementById('home').style.display='none';
+  document.querySelectorAll('.screen').forEach(s=>s.style.display='none');
+  document.getElementById(id).style.display='block';
+}
+
+function goHome(){
+  document.getElementById('home').style.display='grid';
+  document.querySelectorAll('.screen').forEach(s=>s.style.display='none');
+}
+</script>
 
 </body>
 </html>
