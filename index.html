@@ -1,151 +1,158 @@
-index.html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DAHRI ORGANIC FARM HARYANA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAHRI ORGANIC FARM HARYANA | Organic Products</title>
 
   <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; color:#2f2f2f; }
-    header { background:#2e7d32; color:white; padding:35px 20px; text-align:center; }
-    nav { background:#1b5e20; padding:10px; text-align:center; }
-    nav a { color:white; margin:0 12px; text-decoration:none; font-weight:bold; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; color:#2f2f2f; background:#f6f8f5; }
+    header { background:url('https://images.unsplash.com/featured/?organic,farm,india') center/cover no-repeat; color:white; padding:80px 20px; text-align:center; }
+    header h1 { font-size:42px; margin-bottom:10px; }
+    header p { font-size:20px; }
+    nav { background:#1b5e20; padding:12px; text-align:center; position:sticky; top:0; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
     nav a:hover { text-decoration:underline; }
-    section { padding:40px 20px; max-width:1100px; margin:auto; }
-    h2 { color:#2e7d32; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-    .card { background:#f5f5f5; border-radius:10px; padding:20px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .card img { width:100%; height:220px; object-fit:cover; border-radius:8px; }
-    footer { background:#1b5e20; color:white; text-align:center; padding:25px; }
-    .contact { background:#e8f5e9; padding:20px; border-radius:10px; }
-  </style>
-</head>
+    section { padding:50px 20px; max-width:1200px; margin:auto; }
+    h2 { text-align:center; color:#2e7d32; margin-bottom:30px; }
 
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; }
+    .card { background:white; border-radius:12px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; }
+    .card img { width:100%; height:220px; object-fit:cover; border-radius:10px; }
+    .card h3 { margin:15px 0 8px; }
+    .card p { font-size:14px; }
+
+    .btn { display:inline-block; margin-top:12px; background:#25D366; color:white; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:bold; }
+
+    footer { background:#1b5e20; color:white; text-align:center; padding:30px; margin-top:50px; }
+  </style>
+
+</head>
 <body>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918006580098"
-   target="_blank"
-   style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
-          padding:15px 18px; border-radius:50px; font-weight:bold; text-decoration:none;
-          box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index:1000;">
-  📲 WhatsApp
-</a>
+
+<a href="https://wa.me/918006580098" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 8px rgba(0,0,0,.3)">📲 WhatsApp</a>
 
 <header>
   <h1>DAHRI ORGANIC FARM HARYANA</h1>
-  <p><strong>Head:</strong> Anshul</p>
-  <p>Organic & Traditional Farming | जैविक और पारंपरिक खेती</p>
+  <p>Pure Organic Products • सीधे किसान से</p>
 </header>
 
 <nav>
-  <a href="#about">About / परिचय</a>
-  <a href="#crops">Crops / फसलें</a>
-  <a href="#management">Management / प्रबंधन</a>
-  <a href="#equipment">Services / सेवाएं</a>
-  <a href="#gallery">Gallery / गैलरी</a>
-  <a href="#contact">Contact / संपर्क</a>
+  <a href="#products">Products</a>
+  <a href="#process">Organic Farming</a>
+  <a href="#equipment">Machinery</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-  <h2>About Our Farm / हमारे फार्म के बारे में</h2>
-  <p>
-    <strong>DAHRI ORGANIC FARM HARYANA</strong> is located in Haryana and follows pure organic
-    and natural farming practices using cow dung manure, compost, and traditional methods.
-  </p>
-  <p>
-    <strong>दहरी ऑर्गेनिक फार्म हरियाणा</strong> हरियाणा में स्थित है और यहाँ पूरी तरह जैविक
-    और प्राकृतिक खेती की जाती है।
-  </p>
+<section id="products">
+  <h2>Organic Products / जैविक उत्पाद</h2>
+  <div class="grid">
+
+```
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?cow,ghee,india" />
+  <h3>Cow Ghee / गाय का देसी घी</h3>
+  <p>Bilona method • Pure & natural</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Cow%20Ghee">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?buffalo,ghee" />
+  <h3>Buffalo Ghee / भैंस का घी</h3>
+  <p>Rich taste • Farm fresh</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Buffalo%20Ghee">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?mustard,oil,india" />
+  <h3>Mustard Oil / सरसों का तेल</h3>
+  <p>Cold pressed organic oil</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Mustard%20Oil">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?wheat,flour,india" />
+  <h3>Wheat Flour / गेहूं का आटा</h3>
+  <p>Stone ground • Best for roti</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Wheat%20Flour">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?maize,flour" />
+  <h3>Maize Flour / मक्की का आटा</h3>
+  <p>Healthy & organic makki</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Maize%20Flour">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?millet,flour" />
+  <h3>Millet Flour / बाजरे का आटा</h3>
+  <p>High nutrition organic bajra</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Millet%20Flour">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?chickpea,flour" />
+  <h3>Chickpea + Wheat Mix / चना-गेहूं आटा</h3>
+  <p>Protein rich flour mix</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Chickpea%20Wheat%20Flour">Order on WhatsApp</a>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/featured/?jaggery,india" />
+  <h3>Jaggery / गुड़</h3>
+  <p>Chemical free desi gur</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20Jaggery">Order on WhatsApp</a>
+</div>
+```
+
+  </div>
 </section>
 
-<section id="crops">
-  <h2>Our Crops for Sale / बिक्री के लिए फसलें</h2>
+<section id="process">
+  <h2>Our Organic Farming / हमारी जैविक खेती</h2>
   <div class="grid">
     <div class="card">
-      <h3>Main Crops / मुख्य फसलें</h3>
-      <ul>
-        <li>Sugarcane / गन्ना</li>
-        <li>Rice (Paddy) / धान</li>
-        <li>Sunflower / सूरजमुखी</li>
-        <li>Maize (Corn) / मक्का</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Animal Fodder / पशु चारा</h3>
-      <ul>
-        <li>Berseem / बरसीम</li>
-        <li>Green Fodder / हरा चारा</li>
-        <li>Dry Fodder / सूखा चारा</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Sales / बिक्री</h3>
-      <p>
-        All crops are available for sale. Contact on WhatsApp for purchase.<br>
-        सभी फसलें बिक्री के लिए उपलब्ध हैं।
-      </p>
+      <img src="https://images.unsplash.com/featured/?organic,manure,farm,india" />
+      <h3>Organic Manure</h3>
+      <p>We use cow dung manure, compost & natural methods only.</p>
+      <p>हम अपने खेतों में गोबर की खाद और जैविक तरीकों का उपयोग करते हैं।</p>
     </div>
   </div>
 </section>
 
-<section id="management">
-  <h2>Farm Management / फार्म प्रबंधन</h2>
-  <p>
-    We follow crop rotation, organic manure, timely irrigation, and daily monitoring.
-  </p>
-  <p>
-    हमारे फार्म में फसल चक्र, जैविक खाद और सही सिंचाई की जाती है।
-  </p>
-</section>
-
 <section id="equipment">
-  <h2>Machinery, Rental & Support / मशीनरी, किराया और सहायता</h2>
+  <h2>Machinery & Support / मशीनरी और सहायता</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Tractors for Rent / ट्रैक्टर किराये पर</h3>
-      <ul>
-        <li>John Deere Tractor</li>
-        <li>Mahindra Tractor</li>
-        <li>Trolley & Implements</li>
-      </ul>
-      <a href="https://wa.me/918006580098?text=I%20want%20tractor%20on%20rent"
-         target="_blank"
-         style="display:inline-block; margin-top:10px; background:#25D366;
-                color:white; padding:10px 15px; border-radius:8px;
-                text-decoration:none; font-weight:bold;">
-        📲 Enquire on WhatsApp
-      </a>
-    </div>
 
-    <div class="card">
-      <h3>Animals / पशु</h3>
-      <ul>
-        <li>Cows / गाय</li>
-        <li>Buffaloes / भैंस</li>
-        <li>Traditional Carts / गाड़ियाँ</li>
-      </ul>
-    </div>
+```
+<div class="card">
+  <h3>Tractors on Rent / ट्रैक्टर किराये पर</h3>
+  <p>John Deere • Mahindra • Trolley</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20want%20tractor%20on%20rent">Enquire on WhatsApp</a>
+</div>
 
-    <div class="card">
-      <h3>Farmer Support / किसान सहायता</h3>
-      <p>
-        We help small farmers with guidance and machinery.
-      </p>
-      <a href="https://wa.me/918006580098?text=I%20need%20farming%20help"
-         target="_blank"
-         style="display:inline-block; margin-top:10px; background:#2e7d32;
-                color:white; padding:10px 15px; border-radius:8px;
-                text-decoration:none; font-weight:bold;">
-        🌾 Farmer Help
-      </a>
-    </div>
+<div class="card">
+  <h3>Animals / पशु</h3>
+  <p>Cows • Buffaloes • Traditional Carts</p>
+</div>
+
+<div class="card">
+  <h3>Farmer Help / किसान सहायता</h3>
+  <p>We help small farmers with guidance & machinery.</p>
+  <a class="btn" href="https://wa.me/918006580098?text=I%20need%20farming%20help">Farmer Help</a>
+</div>
+```
+
   </div>
 </section>
 
 <section id="gallery">
-  <h2>Haryanvi Culture & Farming / हरियाणवी खेती</h2>
+  <h2>Haryanvi Culture & Fields / हरियाणवी संस्कृति</h2>
   <div class="grid">
     <div class="card"><img src="https://images.unsplash.com/featured/?haryana,farm" /></div>
     <div class="card"><img src="https://images.unsplash.com/featured/?tractor,india" /></div>
@@ -156,12 +163,12 @@ index.html
 
 <section id="contact">
   <h2>Contact Us / संपर्क करें</h2>
-  <div class="contact">
-    <p><strong>Name:</strong> Anshul</p>
-    <p><strong>Phone:</strong> 8006580098</p>
-    <p><strong>Email:</strong> anshuldahri4686@gmail.com</p>
-    <p>For crop purchase, tractor rent & farmer help – contact on WhatsApp.</p>
-  </div>
+  <p style="text-align:center;font-size:18px">
+    <b>Anshul</b><br />
+    📞 8006580098<br />
+    📧 anshuldahri4686@gmail.com<br />
+    📍 Haryana, India
+  </p>
 </section>
 
 <footer>
